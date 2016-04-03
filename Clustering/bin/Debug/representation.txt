@@ -1,0 +1,1916 @@
+﻿Intelligence without representation*Rodney A. BrooksMIT Artificial Intelligence Laboratory, 545 Technology Square, Rm. 836, Cambridge, MA 02139, USA
+Received September 1987
+Brooks, R.A., Intelligence without representation, Artificial Intelligence 47 (1991), 139320159.
+* This report describes research done at the Artificial Intelligence Laboratory of the Massachusetts 
+Institute of Technology. 
+Support 
+for the
+research is provided in part by an IBM Faculty 9 Development Award, in part by a grant from the Systems Development Foundation,
+ in part by
+the University 
+Research 
+Initiative under 
+Office of Naval Research contract N00014-86-K-0685 and in part by the Advanced 
+Research
+Projects Agency under Office of Naval Research contract N00014-85-K-0124.
+Abstract
+Artificial intelligence research has foundered on the issue of representation. When intelligence is approached in an incrementa
+l manner, 
+with
+strict reliance on interfacing to the real world through perception and action, reliance on representation disappears. In 
+this 
+paper we 
+outline
+our approach to incrementally 
+building 
+complete intelligent 
+Creatures. The fundamental decomposition of the 
+intelligent system is not 
+into
+independent information processing 
+units 
+which 
+must 
+interface 
+with 
+each other via representations. Instead, the 
+intelligent system is
+decomposed into independent and parallel activity producers which all 
+interface directly to 
+the world through perception and action, 
+rather
+than 
+interface to each other particularly 
+much. The 
+notions of 
+central and peripheral 
+systems 
+evaporateeverything is 
+both 
+central and
+peripheral. Based on these principles we have built a very successful series of mobile robots which operate without supervision
+ as Creatures in
+standard office environments.1. 
+Introduction
+Artificial intelligence 
+started as a field 
+whose goal
+was to replicate 
+human level intelligence in a
+machine.
+Early hopes diminished as 
+the magnitude and
+difficulty of that goal was 
+appreciated. 
+Slow 
+progress
+was 
+made 
+over the next 25 
+years in demonstrating
+isolated aspects of intelligence. Recent work has
+tended to 
+concentrate on commercializable aspects of
+"intelligent assistants" for human workers.
+No one talks about replicating the full gamut of
+human intelligence any more. Instead we see a 
+retreat
+into 
+specialized 
+subproblems, such as ways to
+represent knowledge, natural language 
+understanding,
+vision or 
+even more 
+specialized areas 
+such as truth
+maintenance 
+systems or plan verification. All the
+work in these 
+subareas is benchmarked 
+against the
+sorts of tasks humans do within those 
+areas.
+Amongst the 
+dreamers 
+still in the 
+field of AI (those
+not dreaming about dollars, that is), there is a feeling.
+that one 
+day 
+all these 
+pieces 
+will all fall into 
+place
+and we will see "truly" intelligent systems emerge.
+However, I, 
+and 
+others, believe that human 
+level
+intelligence is too complex and little understood to be
+correctly 
+decomposed 
+into the right 
+subpieces at the
+moment 
+and 
+that 
+even if we knew 
+the subpieces we
+still 
+wouldn't know the right 
+interfaces between
+them. Furthermore, we will 
+never understand 
+how to
+decompose human level intelligence until we've had a
+lot of practice with simpler level intelligences.
+In this 
+paper I therefore argue 
+for a 
+different
+approach to creating artificial intelligence:
+245 We must 
+incrementally build up the capabilities of
+intelligent systems, having complete systems at
+each step of the way 
+and 
+thus automatically 
+ensure
+that the pieces and their interfaces are valid.
+245 At each 
+step we should build complete intelligent
+systems that we let loose in the real world with real
+sensing 
+and 
+real 
+action. Anything less 
+provides a
+candidate with which we can delude ourselves.
+We have been following this approach 
+and 
+have 
+built
+a series of autonomous mobile robots. We 
+have
+reached an 
+unexpected 
+conclusion (C) 
+and 
+have a
+rather radical hypothesis (H).
+(C)When we examine very simple level intelligence
+we find 
+that explicit 
+representations 
+and 
+models
+of the world simply get in the way. It turns out
+to be better to use the world as its own model.
+(H)Representation is the wrong unit of 
+abstraction
+in building the bulkiest parts of intelligent
+systems.
+Representation has been the 
+central 
+issue in 
+artificial
+intelligence work over the last 15 
+years 
+only 
+because
+it has provided an interface between otherwise isolated
+modules and conference papers.
+2. The evolution of intelligence
+We already 
+have an existence proof 
+of, the
+possibility of intelligent entities: human beings.
+Additionally, many animals 
+are 
+intelligent to some
+degree. (This is a 
+subject of intense 
+debate, 
+much of
+which really 
+centers around a 
+definition of intelligence.) They have 
+evolved over 
+the 4.6 
+billion
+year history of the earth.
+It is instructive to 
+reflect on 
+the way in 
+which
+earth-based 
+biological evolution spent its 
+time.
+Single-cell entities 
+arose 
+out of the 
+primordial 
+soup
+roughly 3.5 billion years ago. A billion 
+years 
+passed
+before 
+photosynthetic plants 
+appeared. 
+After 
+almost
+another 
+billion 
+and a 
+half years, 
+around 
+550 
+million
+years 
+ago, the first fish 
+and 
+Vertebrates arrived, and
+then insects 450 million 
+years 
+ago. Then 
+things
+started 
+moving fast. Reptiles 
+arrived 
+370 
+million
+years 
+ago, 
+followed by dinosaurs at 
+330 and
+mammals at 250 million 
+years 
+ago. The first
+primates 
+appeared 
+120 million 
+years 
+ago 
+and the
+immediate 
+predecessors to 
+the 
+great apes a mere 18
+million years ago. Man arrived in roughly his 
+present
+form 2.5 million years ago. He invented agriculture a
+mere 10,000 years ago, writing less than 5000 
+years
+ago 
+and 
+"expert" knowledge 
+only 
+over the 
+last few
+hundred years,
+This suggests that problem solving 
+behavior,
+language, expert 
+knowledge 
+and 
+application, and
+reason, are all pretty simple once the essence of being
+and reacting are 
+available. That 
+essence is 
+the ability
+to move 
+around in a dynamic 
+environment, sensing
+the surroundings to a 
+degree 
+sufficient to 
+achieve the
+necessary maintenance of 
+life 
+and 
+reproduction. 
+This
+part of intelligence is 
+where 
+evolution has
+concentrated its time321it is much harder.
+I believe that mobility, acute vision and the ability
+to carry 
+out 
+survivalrelated 
+tasks in a 
+dynamic
+environment 
+provide a necessary 
+basis for the
+development of true intelligence. Moravec [11] argues
+this same case rather eloquently.
+Human level intelligence has 
+provided us 
+with an
+existence proof 
+but we must be 
+careful 
+about 
+what
+the lessons are to be gained from it.
+2. 1. A story
+Suppose it is the 1890s. Artificial flight is the
+glamor subject in science, engineering, 
+and 
+venture
+capital circles. A bunch of AF 
+researchers  are
+miraculously 
+transported by a 
+time machine to the
+1980s for a few hours. They spend the whole time in
+the 
+passenger cabin of a commercial 
+passenger
+Boeing 747 on a medium duration flight.
+Returned to the 1890s they feel vigorated, knowing
+that AF is possible on a 
+grand 
+scale. 
+They
+immediately set to work duplicating what they 
+have
+seen. They make 
+great progress in designing 
+pitched
+seats, 
+double pane 
+windows, 
+and 
+know that if only
+they 
+can figure 
+out those 
+weird 
+"plastics" they 
+will
+have their grail 
+within their grasp. (A few
+connectionists amongst them caught a glimpse of an
+engine with 
+its 
+cover off 
+and 
+they 
+are preoccupied
+with inspirations from that experience.)
+3. Abstraction as a dangerous weapon
+Artificial intelligence researchers are 
+fond of 
+pointing
+out that AI is often denied its rightful 
+successes. The
+popular story goes that when 
+nobody has any 
+good
+idea of how to solve a particular sort of problem (e.g.
+playing chess) it is known as an AI problem. 
+When
+an algorithm developed by AI researchers successfully
+tackles such a problem, however, AI 
+detractors 
+claim
+that since the problem was solvable by an algorithm,
+it wasn't really an AI problem 
+after 
+all. Thus AI
+never 
+has any successes. But have 
+you 
+ever 
+heard of
+an AI failure?
+I claim that AI 
+researchers are 
+guilty of the 
+same
+(self) deception. They 
+partition the problems they
+work on into two components. The AI component,
+which they solve, 
+and 
+the non-AI component which,
+they don't solve. Typically, AI "succeeds" by defining
+the parts of the problem that 
+are 
+unsolved as 
+not AI.
+The principal mechanism for 
+this partitioning is
+abstraction. Its application is usually 
+considered part
+of good science, not, as it is in 
+fact used in 
+AI, as a
+mechanism for self-delusion. In AI, abstraction is
+usually 
+used to factor 
+out all aspects of 
+perception
+and motor skills. I argue below that these are the 
+hard
+problems 
+solved by 
+intelligent systems, 
+and 
+further
+that the shape of 
+solutions to these problems
+constrains greatly the 
+correct 
+solutions of the small
+pieces of intelligence which remain.
+Early work in AI 
+concentrated   on 
+games,
+geometrical problems, 
+symbolic algebra, 
+theorem
+proving, 
+and 
+other formal systems (e.g. [6, 9]). In
+each case 
+the semantics of the domains 
+were fairly
+simple.
+In the late sixties 
+and 
+early seventies 
+the blocks
+world became a popular domain for AI research. It had
+a uniform 
+and 
+simple semantics. The key to 
+success
+was to represent the state of the world completely and
+explicitly. 
+Search techniques could 
+then be 
+used for
+planning within this well-understood world. 
+Learning
+could 
+also be 
+done 
+within the blocks 
+world; 
+there
+were 
+only a 
+few 
+simple 
+concepts worth learning and
+they 
+could be captured by 
+enumerating the set of
+subexpressions which must be 
+contained in any
+formal description of a world including an instance of
+the concept. The blocks 
+world 
+was even 
+used for
+vision 
+research and 
+mobile robotics, as it 
+provided
+strong constraints on the 
+perceptual processing
+necessary [12].  Merkwelt 
+may not be anything like that 
+used by
+humans. In fact, it may be the 
+case 
+that our
+introspective descriptions of our internal
+representations 
+are 
+completely misleading 
+and quite
+different from what we really use.
+3.1. A continuing story
+Meanwhile our 
+friends in 
+the 1890s 
+are 
+busy at
+work on their AF machine. They 
+have come to 
+agree
+that the project is too big to be worked on as a single
+entity and that they will need to become specialists in
+different 
+areas. After 
+all, they 
+had asked 
+questions of
+fellow passengers on their 
+flight 
+and discovered 
+that
+the Boeing 
+Co. 
+employed over 
+6000 people to 
+build
+such an airplane.
+ Everyone is busy but 
+there is 
+not a lot of
+communication 
+between 
+the groups. The 
+people
+making the passenger seats used the finest solid steel
+available as the 
+framework. There 
+was some
+muttering that 
+perhaps 
+they should use tubular steel
+to save weight, but the general consensus was that if
+such an obviously big 
+and 
+heavy airplane could fly
+then clearly there was no problem with weight.
+On their observation flight none of the original
+group 
+managed to 
+get a glimpse of the 
+driver's 
+seat,
+but they have done some hard thinking and think they
+have established the major constraints on what should
+be there 
+and 
+how it should work. The 
+pilot, as he
+will be 
+called, 
+sits in a seat 
+above a 
+glass floor so
+that he 
+can see 
+the 
+ground 
+below so he will 
+know
+where to land. There are 
+some 
+side 
+mirrors so he can
+watch behind for 
+other approaching airplanes. His
+controls consist of a foot 
+pedal to 
+control 
+speed 
+(just
+as in these 
+newfangled 
+automobiles that 
+are 
+starting
+to appear), and a steering wheel to turn left 
+and 
+right.
+In addition, the wheel stem can be pushed forward and
+back to make the 
+airplane go up 
+and 
+down. A 
+clever
+arrangement of 
+pipes 
+measures 
+airspeed of the
+airplane 
+and 
+displays it on a dial. What more 
+could
+one want? Oh 
+yes. 
+There's a rather nice 
+setup of
+louvers in the 
+windows so 
+that the 
+driver can get
+fresh air without getting the full blast of the 
+wind in
+his face.
+An interesting sidelight is that all the 
+researchers
+have by 
+now 
+abandoned 
+the study of 
+aerodynamics.
+Some of them 
+had 
+intensely 
+questioned 
+their 
+fellow
+passengers on this subject and not one of the 
+modern
+flyers 
+had 
+known a thing about it. 
+Clearly the AF
+researchers had previously been 
+wasting their time in
+its pursuit.
+4. Incremental intelligence
+I wish to build completely autonomous mobile
+agents that co-exist in the 
+world 
+with humans, and
+are 
+seen by those humans as 
+intelligent beings in
+their own right. I will call such agents 
+Creatures.
+This is my intellectual motivation. I 
+have no
+particular interest in demonstrating how human
+beings work, although humans, like other animals,
+are 
+interesting objects of study in this 
+endeavor as
+they 
+are 
+successful autonomous agents. I 
+have no
+particular interest in applications  it seems 
+clear to
+me that if my goals 
+can be 
+met then the 
+range of
+applications for such Creatures 
+will be limited only
+by our (or their) 
+imagination. I 
+have no particular
+interest in the philosophical implications of
+Creatures, although 
+clearly there 
+will be significant
+implications.
+Given the caveats of the previous two sections and
+considering 
+the 
+parable of 
+the AF 
+researchers, I am
+convinced that I must 
+tread 
+carefully in 
+this 
+endeavor
+to avoid some nasty pitfalls.
+For the moment then, 
+consider 
+the problem of
+building Creatures as an engineering 
+problem. We
+will develop an 
+engineering methodology 
+for building
+Creatures.
+First, let us consider some of the requirements for our
+Creatures.
+245 A Creature must cope appropriately 
+and in a 
+timely
+fashion with changes in its dynamic environment.
+245 A Creature should be 
+robust with 
+respect to its
+environment; minor 
+changes in 
+the properties of
+the 
+world 
+should not 
+lead to 
+total collapse of the
+Creature's behavior; rather one should expect only a
+gradual change in capabilities of the Creature as the
+environment changes more and more.
+245 A Creature should be able to 
+maintain multiple
+goals 
+and, 
+depending on 
+the 
+circumstances it 
+finds
+itself in, 
+change 
+which particular 
+goals it is
+actively pursuing; thus it 
+can 
+both 
+adapt to
+surroundings 
+and 
+capitalize on fortuitous
+circumstances.
+245 A Creature should do 
+something 
+in the 
+world; it
+should have some purpose in being.
+Now, let us consider some of the 
+valid engineering
+approaches to achieving these requirements. As in all
+engineering endeavors it is necessary to decompose a
+complex system into parts, build the parts, 
+then
+interface them into a complete system.
+4. 1. Decomposition by function.   looking at the state of both the first 
+and second
+processes 
+that that number 
+can be 
+given any
+interpretation at all. An extremist might say that we
+really do have representations, 
+but that they 
+are 
+just
+implicit. With an 
+appropriate 
+mapping of the
+complete system and its state to 
+another domain, we
+could 
+define a 
+representation 
+that these numbers and
+topological connections 
+between processes somehow
+encode.
+However we are 
+not happy with calling 
+such
+things a 
+representation. They 
+differ 
+from 
+standard
+representations in too many ways.
+There are no 
+variables 
+(e.g. 
+see [1] for a 
+more
+thorough treatment of this) that 
+need 
+instantiation in
+reasoning processes. There are no rules which 
+need to
+be selected 
+through pattern matching. 
+There are no
+choices to be made. To a large extent the state of the
+world determines 
+the action of the Creature. 
+Simon
+[14] noted 
+that the complexity of behavior of a
+system was not 
+necessarily inherent in the
+complexity of the 
+creature, 
+but Perhaps in the
+complexity of the environment. He 
+made 
+this
+analysis in his 
+description of an 
+Ant 
+wandering the
+beach, but 
+ignored 
+its implications in the 
+next
+paragraph 
+when he 
+talked 
+about humans. We
+hypothesize (following 
+Agre 
+and 
+Chapman) that
+much of 
+even 
+human level activity is similarly a
+reflection of the 
+world 
+through very 
+simple
+mechanisms without detailed representations.
+6. The methodology, in practice
+In order to 
+build systems 
+based on an 
+activity
+decomposition so that they 
+are 
+truly robust we 
+must
+rigorously follow a careful methodology.
+6. 1. Methodological maxims
+First, it is vitally important to test the 
+Creatures
+we build in the 
+real world; 
+i.e., in the 
+same 
+world
+that we humans inhabit. It is 
+disastrous to fall 
+into
+the temptation of testing them in a simplified 
+world
+first, 
+even 
+with the best intentions of 
+later
+transferring activity to an unsimplified world. With a
+simplified 
+world 
+(matte 
+painted 
+walls, 
+rectangular
+vertices everywhere, 
+colored 
+blocks as the only
+obstacles) it is very easy to accidentally 
+build a
+submodule of the system which happens to rely on
+some of those simplified properties. This reliance can
+then easily be 
+reflected in 
+the 
+requirements on the
+interfaces between 
+that submodule 
+and 
+others. The
+disease spreads and the 
+complete system 
+depends in a
+subtle way on the simplified world. 
+When it comes
+time to move to the, unsimplified 
+world, we
+gradually and painfully realize 
+that 
+every piece of the
+system must be rebuilt. Worse than that we may need
+to rethink the total 
+design as 
+the issues may 
+change
+completely. We are not so concerned that it 
+might be
+dangerous to 
+test simplified 
+Creatures 
+first 
+and 
+later
+add 
+more sophisticated layers of control 
+because
+evolution has been successful using this approach.
+Second, as 
+each layer is 
+built it must be 
+tested
+extensively in the 
+real world. 
+The system 
+must
+interact with the real 
+world over 
+extended 
+periods. Its
+behavior 
+must be 
+observed 
+and be 
+carefully and
+thoroughly debugged. When a second layer is added to
+an existing 
+layer there 
+are 
+three 
+potential sources of
+bugs: the first layer, the 
+second 
+layer, or the
+interaction of the two layers. Eliminating the first of
+these source of 
+bugs as a possibility makes 
+finding
+bugs much easier. Furthermore, 
+there is 
+only one
+thing possible to 
+vary in 
+order to 
+fix the bugs321the
+second layer.
+6.2. An instantiation of the methodology
+We have built a series of four robots 
+based on the
+methodology of task decomposition. They all 
+operate
+in an unconstrained dynamic world (laboratory and
+office areas in 
+the MIT Artificial 
+Intelligence
+Laboratory). They successfully 
+operate 
+with 
+people
+walking by, 
+people 
+deliberately 
+trying to 
+confuse
+them, 
+and 
+people just 
+standing by watching 
+them.
+All four robots 
+are 
+Creatures in 
+the sense that on
+power-up they exist in the world 
+and 
+interact 
+with it,
+pursuing multiple goals 
+determined by 
+their control
+layers implementing 
+different 
+activities. This is in
+contrast to other mobile robots that 
+are 
+given
+programs or plans to follow for a specific mission,
+The four robots 
+are 
+shown in Fig. 1. 
+Two are
+identical, so there 
+are 
+really three, designs. One uses
+an offboard 
+LISP machine for 
+most of its
+computations, two use 
+onboard 
+combinational
+networks, 
+and 
+one uses a custom 
+onboard parallel
+processor. All the robots implement the 
+same
+abstract architecture, which we call 
+the 
+subsumption
+architecture 
+which embodies 
+the 
+fundamental 
+ideas
+of decomposition into 
+layers of task 
+achieving
+behaviors, 
+and 
+incremental 
+composition through
+debugging in the 
+real world. 
+Details of 
+these
+implementations can be found in [3].
+Each layer in 
+the subsumption 
+architecture is
+composed of a fixed-topology network of 
+simple
+finite state machines. Each finite state machine has a
+handful of states, one or two internal registers, one or
+two internal timers, 
+and 
+access to 
+simple
+computational machines, which 
+can 
+compute 
+things
+such as vector 
+sums. The finite state 
+machines run
+asynchronously, sending 
+and 
+receiving 
+fixed 
+length
+messages (1-bit messages on the two small 
+robots, and 
+24-bit messages on the 
+larger 
+ones) over wires.
+On our first robot these 
+were 
+virtual wires; on our
+later robots we 
+have 
+used 
+physical wires to 
+connect
+computational components.
+There is no central locus of control. Rather, the finite
+state machines 
+are data-driven by 
+the messages they
+receive. 
+The arrival of messages or the expiration of
+designated 
+time 
+periods cause 
+the finite state
+machines to 
+change 
+state. The finite state 
+machines
+have access to 
+the contents of the messages and
+might output them, test them with a 
+predicate and
+conditionally branch to a different state, or pass them
+to simple computation elements. 
+There is no
+possibility of 
+access to 
+global 
+data, 
+nor of
+dynamically established communications links. 
+There
+is thus no possibility of global control. All 
+finite
+state machines 
+are 
+equal, 
+yet at the same time 
+they
+are prisoners of their fixed topology connections.
+Layers 
+are 
+combined 
+through mechanisms we 
+call
+suppression 
+(whence 
+the name 
+subsumption
+architecture) 
+and 
+inhibition. 
+In both 
+cases as a new
+layer is 
+added, 
+one of the new wires is 
+side-tapped
+into an existing wire. A 
+pre-defined 
+time constant is
+associated 
+with 
+each 
+side-tap. In the 
+case of
+suppression the side-tapping occurs on the input 
+side
+of a finite state machine. If a message 
+arrives on the
+net wire it is 
+directed to 
+the input port of the finite
+state machine as though it had arrived on the existing
+wire. Additionally, any new messages on the existing
+wire 
+are suppressed 
+(i.e., 
+rejected) 
+for the 
+specified
+time period. For inhibition the side-tapping occurs on
+the output 
+side of a 
+finite state machine. A 
+message
+on the new wire 
+simply inhibits 
+messages being
+emitted on the 
+existing 
+wire for the 
+specified 
+time
+period. Unlike suppression the new message is not
+delivered in their place.
+As an example, 
+consider 
+the 
+three layers of 
+Fig. 2.
+These are three layers of control 
+that we 
+have run on
+our first mobile robot for well over a year. The robot
+has a ring of twelve ultrasonic sonars as 
+its 
+primary
+sensors. 
+Every 
+second 
+these sonars 
+are 
+run to give
+twelve radial depth measurements. Sonar is extremely
+noisy 
+due to 
+many objects being mirrors to sonar.
+There are 
+thus problems with 
+specular reflection and
+return paths following 
+multiple 
+reflections 
+due to
+surface skimming with low angles of 
+incidence 
+(less
+than thirty degrees).
+In more detail the three layers work as follows: Fig. 1. The four MIT AI laboratory Mobots. Left-most is the first
+built 
+Allen, which relies on an offboard 
+LISP 
+machine for
+computation support. The right-most one is Herbert, shown with a
+24 node 
+CMOS 
+parallel processor surrounding 
+its 
+girth. New
+sensors and fast early 
+vision 
+processors are 
+still to be built and
+installed. In the middle 
+are 
+Tom and 
+Jerry, based on a
+commercial toy chassis, with single PALs 
+(Programmable 
+Array
+of Logic) as their controllers. (1) The lowest-level 
+layer 
+implements a 
+behavior
+which makes the robot (the physical embodiment of
+the 
+Creature) avoid 
+hitting objects. It both 
+avoids
+static objects and moving objects, even those that are
+actively attacking it. The finite state machine 
+labelled
+sonar 
+simply runs the sonar devices 
+and 
+every 
+second
+emits an instantaneous map with the 
+readings
+converted to polar coordinates. This map is 
+passed on
+to the 
+collide 
+and 
+feelforce 
+finite state machine. The
+first of these simply 
+watches to see if there is
+anything dead ahead, and if so sends a 
+halt 
+message to
+the finite state machine in 
+charge of 
+running the
+robot forwards321if that finite state machine is 
+not in
+the 
+correct 
+state the message may well be 
+ignored.
+Simultaneously, the other finite state 
+machine
+computes a repulsive force on the robot, 
+based on an
+inverse 
+square 
+law, 
+where each 
+sonar return is
+considered to 
+indicate 
+the 
+presence of a repulsive
+object. The contributions from each sonar are added to
+produce an 
+overall 
+force 
+acting on the robot. The
+output is 
+passed to 
+the 
+runaway 
+machine which
+thresholds it 
+and 
+passes it on to the 
+turn 
+machine
+which orients the robot 
+directly away 
+from the
+summed repulsive force. 
+Finally, the 
+forward
+machine 
+drives 
+the robot 
+forward. Whenever 
+this
+machine 
+receives a 
+halt message while the robot is
+driving forward, it commands the robot to halt.
+This network of finite state machines 
+generates
+behaviors which let the robot 
+avoid 
+objects. If it
+starts in the middle of an empty room it simply 
+sits
+there. If someone walks up to 
+it, the robot 
+moves
+away. If it moves in the direction of other obstacles it
+halts. Overall, it 
+manages to 
+exist in a 
+dynamic
+environment without hitting or being hit by objects. The next layer makes the robot 
+wander 
+about,
+when not busy 
+avoiding objects. The 
+wander 
+finite
+state machine 
+generates a random heading 
+for the
+robot 
+every 
+ten 
+seconds or 
+so. The 
+avoid 
+machine
+treats that 
+heading as an attractive 
+force and 
+sums it
+with the repulsive force computed from the sonars. It
+uses the result to suppress the 
+lower-level behavior,
+forcing the robot to move in a direction close to 
+what
+wander 
+decided 
+but at the same time 
+avoid any
+obstacles. Note that if the. 
+turn 
+and 
+forward 
+finite
+state machines 
+are 
+busy running the robot the new
+impulse to wander will be ignored.
+(3) The third layer makes the robot try to explore.
+It looks for distant places, then tries to 
+reach 
+them.
+This 
+layer suppresses 
+the 
+wander 
+layer, 
+and 
+observes
+how the bottom 
+layer diverts 
+the robot 
+due. to
+obstacles, 
+(perhaps dynamic). It corrects for any
+divergences and the robot achieves the goal. Fig. 2. We 
+wire, finite state machines together 
+into 
+layers of
+control. Each layer is built on top of existing 
+layers. Lower level
+layers never rely on the existence of higher level layers.The 
+whenlook 
+finite state machine notices 
+when
+the robot is not busy moving, 
+and 
+starts up, the 
+free
+space finder (labelled 
+stereo in the 
+diagram) 
+finite
+state machine. At the same time it inhibits wandering
+behavior so that the observation 
+will 
+remain valid.
+When a 
+path is 
+observed it is 
+sent to the 
+pathplan
+finite state machine, which injects a 
+commanded
+direction to 
+the 
+avoid 
+finite state machine. In 
+this
+way, 
+lower-level obstacle 
+avoidance 
+continues to
+function. This may 
+cause 
+the robot to go in a
+direction different to 
+that 
+desired by 
+pathplan. 
+For
+that reason the actual path of the robot is 
+monitored
+by the 
+integrate 
+finite state machine, which 
+sends
+updated 
+estimates to the 
+pathplan 
+machine. This
+machine then acts as a 
+difference 
+engine forcing the
+robot in the 
+desired 
+direction 
+and 
+compensating for
+the actual path of the robot as it avoids obstacles.
+These particular layers 
+were 
+implemented on our
+first robot. See 
+[3] for more details. Brooks and
+Connell [5] 
+report on another three 
+layers
+implemented on that particular robot.
+7. What this is not
+The subsumption 
+architecture 
+with its 
+network of
+simple machines is reminiscent, at the 
+surface level
+at least, with a number of mechanistic 
+approaches to
+intelligence, such as connectionism 
+and 
+neural
+networks. But it is 
+different in 
+many 
+respects for
+these 
+endeavors, 
+and 
+also 
+quite 
+different 
+from many
+other post-Dartmouth traditions in 
+artificial
+intelligence. We very briefly explain those 
+differences
+in the following sections.
+7.1. It isn't connectionism
+Connectionists try to make networks of 
+simple
+processors. In that 
+regard, 
+the things they build (in
+simulation only321no connectionist has 
+ever driven a
+real 
+robot in a 
+real 
+environment, no matter how
+simple) are similar to the subsumption networks we
+build. 
+However, their processing 
+nodes tend to be
+uniform and they are looking (as their name suggests)
+for revelations from 
+understanding 
+how to 
+connect
+them 
+correctly (which is 
+usually 
+assumed to mean
+richly at least). Our 
+nodes are 
+all 
+unique 
+finite state
+machines and the density of connections is very much
+lower, certainly not uniform, 
+and 
+very 
+low 
+indeed
+between 
+layers. Additionally, connectionists seem to
+be looking for explicit 
+distributed representations to
+spontaneously arise from their networks. We 
+harbor
+no such hopes because we believe representations are
+not 
+necessary 
+and 
+appear 
+only in the 
+eye or 
+mind of
+the observer.
+7.2. It isn't neural networks
+Neural networks is 
+the parent discipline of 
+which
+connectionism is a 
+recent 
+incarnation. 
+Workers in
+neural networks claim 
+that 
+there is 
+some biological
+significance to their network nodes, as models of
+neurons. Most of the, 
+models seem 
+wildly
+implausible given the paucity of modeled connections
+relative to the thousands 
+found in real 
+neurons. We
+claim no biological significance in our 
+choice of
+finite state machines as network nodes.
+7.3. It isn't production rules
+Each individual 
+activity 
+producing layer of our
+architecture could be viewed as an 
+implementation of
+a production rule. When 
+the right conditions 
+are met
+in the environment a certain action will be performed. We feel 
+that analogy is a little like saying that any
+FORTRAN program with IF statements is
+implementing a 
+production rule 
+system. A 
+standard
+production system really is more321it has a rule base,
+from which a rule is 
+selected based on 
+matching
+preconditions of 
+all the rules to some 
+database. The
+preconditions may 
+include variables 
+which must be
+matched to individuals in the 
+database, 
+but 
+layers run
+in parallel 
+and 
+have no variables or 
+need for
+matching. 
+Instead, aspects of 
+the 
+world are 
+extracted
+and these directly 
+trigger or modify certain behaviors
+of the layer.
+7.4. It isn't a blackboard
+If one, really 
+wanted, 
+one 
+could make an analogy
+of our networks to a 
+blackboard, 
+control 
+architecture.
+Some of the finite state machines 
+would be 
+localized
+knowledge sources. Others would be processes acting
+on these 
+knowledge sources by finding 
+them on the
+blackboard. There is a 
+simplifying point in our,
+architecture however: 
+all the 
+processes 
+know 
+exactly
+where to  
+look on the 
+blackboard as 
+they are
+hard-wired to 
+the 
+correct 
+place. I think this 
+forced
+analogy indicates 
+its own 
+weakness. 
+There is no
+flexibility at all on 
+where a 
+process can 
+gather
+appropriate knowledge. 
+Most 
+advanced 
+blackboard
+architectures make heavy 
+use of the 
+general sharing
+and 
+availability of almost all 
+knowledge.
+Furthermore, in spirit at least, 
+blackboard 
+systems
+tend to 
+hide 
+from a consumer of 
+knowledge 
+who the
+particular 
+producer  
+was. This is the primary 
+means
+of abstraction in 
+blackboard 
+systems. In our system
+we make such connections explicit and permanent.
+7.5. It isn't German philosophy
+In some 
+circles much 
+credence is 
+given to
+Heidegger as 
+one who 
+understood 
+the 
+dynamics of
+existence. Our 
+approach 
+has 
+certain 
+similarities to
+work inspired by 
+this 
+German 
+philosopher (e.g. 
+[1])
+but our work was not so inspired. It is 
+based 
+purely
+on engineering considerations. That does not 
+preclude
+it from being 
+used in 
+philosophical 
+debate as an
+example on any side of any fence, however.
+8. Limits to growth
+Since our 
+approach is a performance-based 
+one, it
+is the 
+performance of 
+the systems we build 
+which
+must be 
+used to measure 
+its usefulness 
+and to 
+point
+to its limitations.
+We claim that as of mid-1987 our 
+robots, using
+the subsumption 
+architecture to 
+implement 
+complete
+Creatures, 
+are 
+the most 
+reactive real-time 
+mobile
+robots in existence. Most other mobile robots are
+still at the stage of 
+individual "experimental 
+runs" in
+static environments, or at best in completely 
+mapped
+static environments. Ours, on the other 
+hand, 
+operate
+completely autonomously in complex 
+dynamic
+environments at the flick of their on switches, and
+continue until their 
+batteries 
+are drained. We believe
+they 
+operate at a 
+level closer to 
+simple insect 
+level
+intelligence than to 
+bacteria 
+level intelligence. Our
+goal (worth nothing if we don't 
+deliver) is 
+simple
+insect level intelligence within two years. Evolution
+took 3 billion 
+years to 
+get from single cells to
+insects, 
+and 
+only 
+another 
+500 million 
+years from
+there to humans. This statement is not 
+intended as a
+prediction of 
+our future 
+performance, 
+but 
+rather to
+indicate 
+the nontrivial 
+nature of insect 
+level
+intelligence.
+Despite this 
+good performance to date, there 
+are a
+number of serious questions about our approach. We
+have beliefs 
+and 
+hopes about how these 
+questions
+will be 
+resolved, 
+but 
+under 
+our 
+criteria 
+only
+performance 
+truly counts. Experiments 
+and 
+building
+more complex systems take time, so with the 
+caveat
+that the experiments 
+described 
+below have 
+not yet
+been performed we 
+outline how we 
+currently see our
+endeavor progressing. Our intent in discussing this is
+to indicate 
+that 
+there is at 
+least a plausible path
+forward to more intelligent machines from our current
+situation.
+Our belief is that the sorts of activity 
+producing
+layers of control we 
+are 
+developing 
+(mobility, vision
+and 
+survival 
+related 
+tasks) 
+are necessary prerequisites
+for higher-level intelligence in the 
+style we attribute
+to human beings.
+The most natural 
+and 
+serious questions 
+concerning
+limits of our approach are:
+245 How many layers 
+can be 
+built in the subsumption
+architecture before 
+the interactions 
+between layers
+become too complex to continue?
+245 How complex 
+can 
+the behaviors be that are
+developed without the aid of central representations?
+245 Can higher-level functions such as learning occur in
+these 
+fixed 
+topology networks of simple finite 
+state
+machines?
+We outline our current thoughts on these questions.8.1. How many layers?The highest number of layers we 
+have run on a
+physical robot is three. In simulation we have run six
+parallel layers. The 
+technique of completely
+debugging the 
+robot on all existing activity  [2]R.J. 
+Bobrow and 
+J.S. 
+Brown, Systematic understanding:
+synthesis, analysis, and contingent knowledge in 
+specialized
+understanding systems, in: R.J. Bobrow and A.M, Collins, 
+eds.,
+Representation and Understanding 
+(Academic 
+Press, New
+York, 1975) 103-129.
+[3]R.A. Brooks, A robust 
+layered control 
+system 
+for a 
+mobile
+robot, 
+IEEE J. Rob. Autom. 2 
+(1986) 14-23.
+[41R.A. Brooks, A 
+hardware retargetable 
+distributed 
+layered
+architecture for 
+mobile robot control, 
+in: 
+Proceedings 
+IEEE
+Robotics and Automation, 
+Raleigh, NC (1987) 106-110.
+ [5]R.A. Brooks and J.H. Connell, Asynchronous distributed
+control system 
+for a 
+mobile robot, 
+in: 
+Proceedings 
+SPIE,
+Cambridge, MA (1986) 77-84.
+[6]E.A. Feigenbaum and J.A. Feldman, eds., 
+Computers and
+Thought 
+(McGraw-Hill, San Francisco, CA, 1963).
+[7]J.L. Gould and P. Marler, Learning by 
+instinct, Sci. 
+Am.
+(1986) 74-85.
+[8]A.C. Lewis, Memory constraints and Rower 
+choice in pieris
+rapae, 
+Science 
+232 (1986) 863-865.
+[9] M.L. 
+Minsky, 
+ed., 
+Semantic Information Processing 
+(MIT
+Press, Cambridge, MA, 1968).
+[10] M.L. 
+Minsky, 
+Society of Mind 
+(Simon 
+and Schuster, New
+York, 1986).
+[11] 
+H.P. 
+Moravec, 
+Locomotion, 
+vision 
+and intelligence, 
+in: M.
+Brady and R. Paul, eds., 
+Robotics Research 
+1 (MIT Press,
+Cambridge, MA, (1984) 215-224.
+[12] N.J. 
+Nilsson, Shakey the robot, 
+Tech. Note 323, 
+SRI AI
+Center, Menlo Park, CA (1984).
+[13] E.H. Shortliffe, 
+MYCIN: Computer-Based 
+Medical
+Consultations 
+(Elsevier, New York, 1976).
+[14] H.A. 
+Simon, 
+The Sciences of the 
+Artificial 
+(MIT Press,
+Cambridge, MA, 1969).
+[15] J. Von Uexk237ll, 
+Umwelt and Innenwelt der Tiere 
+(Berlin,
+1921). 

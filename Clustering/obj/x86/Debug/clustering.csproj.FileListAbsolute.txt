@@ -1,0 +1,50 @@
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Final Year Project 2.exe
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Final Year Project 2.pdb
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\itextsharp.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Microsoft.mshtml.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Telerik.WinControls.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Telerik.WinControls.GridView.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Telerik.WinControls.RadDock.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Telerik.WinControls.RadMarkupEditor.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Telerik.WinControls.Scheduler.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\Telerik.WinControls.UI.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\TelerikCommon.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\bin\Debug\TelerikData.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\clustering.csprojResolveAssemblyReference.cache
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Interop.Microsoft.Office.Core.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\clustering.csproj.ResolveComReference.cache
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.Properties.Resources.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.RadForm1.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.ExtractedTextViewer.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.MainMenu.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.ShapedForm1.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\clustering.csproj.GenerateResource.Cache
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final Year Project 2.exe.licenses
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final Year Project 2.exe
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final Year Project 2.pdb
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Final Year Project 2.exe
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Final Year Project 2.pdb
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\itextsharp.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Microsoft.mshtml.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Telerik.WinControls.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Telerik.WinControls.GridView.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Telerik.WinControls.RadDock.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Telerik.WinControls.RadMarkupEditor.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Telerik.WinControls.Scheduler.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\Telerik.WinControls.UI.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\TelerikCommon.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\bin\Debug\TelerikData.xml
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\clustering.csprojResolveAssemblyReference.cache
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Interop.Microsoft.Office.Core.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\clustering.csproj.ResolveComReference.cache
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Final_Year_Project_2.Properties.Resources.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Final_Year_Project_2.RadForm1.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Final_Year_Project_2.ExtractedTextViewer.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Final_Year_Project_2.MainMenu.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Final_Year_Project_2.ShapedForm1.resources
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\clustering.csproj.GenerateResource.Cache
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Final Year Project 2.exe.licenses
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Final Year Project 2.exe
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Clustering\obj\x86\Debug\Final Year Project 2.pdb

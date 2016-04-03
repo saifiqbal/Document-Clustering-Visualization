@@ -1,0 +1,75 @@
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.Properties.Resources.resources
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Final Year Project 2.exe
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Final Year Project 2.pdb
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.exe
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.pdb
+c:\users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.RadForm1.resources
+C:\Users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.csproj.ResolveComReference.cache
+C:\Users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.exe.licenses
+C:\Users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\saifee\documents\visual studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\itextsharp.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.GridView.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.RadDock.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.RadMarkupEditor.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Scheduler.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Aqua.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Breeze.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Desert.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.HighContrastBlack.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Miscellaneous.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Office2007Black.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Office2007Silver.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Office2010Black.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Office2010Blue.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Office2010Silver.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Telerik.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Vista.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Themes.Windows7.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.UI.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\TelerikCommon.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\TelerikData.dll
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.xml
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.GridView.xml
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.RadDock.xml
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.RadMarkupEditor.xml
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Scheduler.xml
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\TelerikCommon.xml
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\bin\Debug\TelerikData.xml
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.ExtractedTextViewer.resources
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.MainMenu.resources
+C:\Users\saifee\Documents\Visual Studio 2010\Projects\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.ShapedForm1.resources
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.csproj.ResolveComReference.cache
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.exe
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.pdb
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Final Year Project 2.exe
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Final Year Project 2.pdb
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\itextsharp.dll
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.xml
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.GridView.xml
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.RadDock.xml
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.RadMarkupEditor.xml
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.Scheduler.xml
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\TelerikCommon.xml
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\bin\Debug\TelerikData.xml
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.csprojResolveAssemblyReference.cache
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.Properties.Resources.resources
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.RadForm1.resources
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.ExtractedTextViewer.resources
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.MainMenu.resources
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final_Year_Project_2.ShapedForm1.resources
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.csproj.GenerateResource.Cache
+C:\Users\Saif10p\Desktop\Final Year Project 2\Final Year Project 2\obj\x86\Debug\Final Year Project 2.exe.licenses
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Interop.Microsoft.Office.Core.dll
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final Year Project 2.csproj.ResolveComReference.cache
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final Year Project 2.exe
+D:\Projects\Document Clustering & Visualization\Document-Clustering-Visualization\Final Year Project 2\obj\x86\Debug\Final Year Project 2.pdb
